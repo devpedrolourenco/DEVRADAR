@@ -27,7 +27,7 @@ Dentro da pasta do Backend através do powershell voce executa o sequinte comand
 
 para ele nao realizar perguntas sobre o projeto que nao sao importantes no momento
 
-![Yarn](.../img/smo-08.png)
+![Yarn](../img/smo-08.png)
 
 
 assim que realizarmos isso, ira aparecer um package.json 
