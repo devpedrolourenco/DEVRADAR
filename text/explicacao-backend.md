@@ -16,7 +16,7 @@ A **API Restfull** quer dizer que ela segue uns padrões, são padrões de metod
 
 Quando se tem o backend feito com node precisamos de algo para interpretar com o fontend, 
 
-![Estrutura](..img/smo-07.png)
+![Estrutura](../img/smo-07.png)
 
 E é usado o JSON que é a linguagem (ela nao e bem uma linguagem ela e uma estrutura de dados) que faz essa ponte entre o back e o front
 a notação dele é JavaScriot Of Notation. 
