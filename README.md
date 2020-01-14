@@ -17,3 +17,30 @@
 Recomenda-se que se instala a versão LTS que é a de suporte a longo prazo. 
 
 ![home Node](img/smo-01.png)
+
+
+> É recomendado que se instale o node atraves dos gerenciadores de pacote pois assim facilita a ataulização mudanças e versão e etc!
+
+Para conseguirmos instalar por gerenciador de pacotes iremos clicar em Dowloads e no canto inferior clicar em **Installing Node.js via Package Manager**
+
+![Download Node](img/smo-02.png)
+
+[Intalling package manager](https://nodejs.org/en/download/package-manager/)
+
+
+![pkg mananger](img/smo-03.png)
+
+
+Primeiro devemos instalar o Chocolato no caso do Windowns que é um gerenciador de pacotes via powershell:
+
+[Download choco](https://chocolatey.org/install)
+
+![Download choco](img/smo-06.png)
+
+Após instalar o gerenciador de pacores volta no site do Node e executa o comando via terminal de instalação
+
+![Codigo Node.js](img/smo-05.png)
+
+E ai ele sera intalado no powerShell
+
+![Powershell](img/smo-04.png)
