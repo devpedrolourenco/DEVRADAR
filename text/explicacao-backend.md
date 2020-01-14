@@ -134,5 +134,98 @@ Se observarmos ele ficara executando, porem para acessarmos temos que ir no nave
 
 caso queria parar a execucao do node e so apertar ``` ctrl + c ```
 
+<hr>
 
-4.
+4. Utilizando a Estrutura de dados chamada Json \
+
+No lugar de send como mostrado no codigo acima iremos colocar json e nao podemos enviar uam string nele, temos que enviar um vetor ou um objeto. para enviar um objeto coloca entre chafes
+
+
+```Javascript
+
+
+ app.get('/', (request, response) => {
+     return response.json({ message: ' Hello World'}); 
+
+ });
+
+```
+
+<hr>
+
+5. Atualizacao automatica 
+
+Uma coisa que temos que perceber se eu mudar qualquer coisa e salvar e tentar atualizar ele nao ira mudar, porque o node depois que ele executou ele nao fica observando as alteracoes no codigo simplemsente ele so fica no anterior, para isso agente vai instalar uma outra dependencia / biblioteca com o seguinte comnado:
+
+``` yarn add nodemon -D ``` esse -D ele significa que e uma dependencia de desenvolvimento
+
+dependencias de desenvolvimento ficam separadas no packege.json dentro de devDependencies, o que quer dizer uma dependencia de desenvolvimento? sao dependencias que nos nao iremos utilizar ela quando a aplicacao for para producao que iremos usar somente no ambiente de desenvolvimento. 
+
+<hr>
+
+6. Executando a aplicacao em ambiente de desenvolvimento:
+
+podemos usar:
+
+``` yarn nodemon index.js ``` 
+
+
+Executando asssim ou seja sempre que alterarmos algo no codigo sera atualizado automaticamente
+
+
+**POREM PARA NAO FICARMOS ESCREVENDO TODA VEZ YARN NODEMON (NOME DO ARQUIVO) PODEMOS CRIAR UM MINI SCRIPT NO PACKGE.JSON** 
+
+como abaixo:
+
+![navegador](../img/smo-11.png)
+
+```json
+
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev" : "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
+
+
+```
+
+ou seja estou falando no script acima que toda vez que eu escrever **yarn dev** ira executar a instrucao dentro do terminal via script como **nodemon index.js**
+
+![script](../img/smo-12.png)
+
+
+6. Apos deixar executando abriremos um outro terminal onde esta apontado com a seta na imagagem abaixo e logo em seguida como fica aberto dois terminais.
+
+![part1-terminal](../img/smo-13.png)
+
+Ficara assim!
+
+![part1-terminal](../img/smo-14.png)
+
+Isso para fazer instalacoes de outras dependencias executar ou aglo assim.
+
+
+<hr>
+
+## Entendendo as rotas e Metodos
+
+Os principais metodos que utilizaremos sao: 
+
+| Metodos |  Descricao                                                                                                                        |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------|
+|  get    | Quando se cria uma rota usando o metodo get, quer dizer que estou buscando uma informacao ou seja get do ingles significa pegar   | 
+|  post   |                                                                                                                                   |
+|  put    | Quando se quer editar um recurso da aplicacao                                                                                     |  
+|  delete | E o delete e para deletar                                                                                                         |
+
+
+get conseguimos acessar sem precisar de outros sistemas porque ele ja e nativo do browser, porem se quisermos testar os outros metodos 
