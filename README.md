@@ -44,3 +44,19 @@ Após instalar o gerenciador de pacores volta no site do Node e executa o comand
 E ai ele sera intalado no powerShell
 
 ![Powershell](img/smo-04.png)
+
+>lembrando que para instalar a versão LTS voce deve executar no Powerselll o seguinte comando:
+
+```powersheel
+
+ choco install nodejs-lts
+ 
+  ```
+
+**Caso voce tenha instalado sem querer a versao current pode remover ela com o seguinte comando antes de instalar a versao lts** 
+
+```powersheel
+
+ choco unistall nodejs -y --remove-dependencies 
+ 
+ ```
