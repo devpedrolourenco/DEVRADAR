@@ -106,3 +106,33 @@ const app = express(); //express ele e uma funcao
 
 
 ```
+
+
+e para que se retorne uma resposta para testar a aplicacao usamos o send como abaixo
+
+```javascript
+
+
+ app.get('/', (request, response) => {
+     return response.send('Hello World'); //response serve para mandar um texto ou seja to mandando retornar uma resposta
+
+ });
+
+
+```
+
+**PARA EXECUTAR O ARQUIVO DEVE COLOCAR NA LINHA DE COMANDO DO TERMINAL**
+
+``` node index.js ```  Ou seja estara mandando o node executar o arquivo index.js
+
+![Node Executando](../img/smo-09.png)
+
+Se observarmos ele ficara executando, porem para acessarmos temos que ir no navegador e colocar localhost e a porta selecionada que no caso do codigo foi a porta 3333
+
+
+![navegador](../img/smo-10.png)
+
+caso queria parar a execucao do node e so apertar ``` ctrl + c ```
+
+
+4.

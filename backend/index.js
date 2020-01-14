@@ -13,7 +13,7 @@ const app = express(); //express ele e uma funcao
 
 
  app.get('/', (request, response) => {
-
+     return response.send('Hello World'); //response serve para mandar um texto ou seja to mandando retornar uma resposta
 
  }); //aqui vai definir a rota e podemos imputar uma arrow function 
 
