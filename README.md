@@ -47,16 +47,8 @@ E ai ele sera intalado no powerShell
 
 >lembrando que para instalar a versão LTS voce deve executar no Powerselll o seguinte comando:
 
-```powersheel
-
- choco install nodejs-lts
- 
-  ```
+``` choco install nodejs-lts  ```
 
 **Caso voce tenha instalado sem querer a versao current pode remover ela com o seguinte comando antes de instalar a versao lts** 
 
-```powersheel
-
- choco unistall nodejs -y --remove-dependencies 
- 
- ```
+``` choco unistall nodejs -y --remove-dependencies   ```
