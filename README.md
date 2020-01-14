@@ -55,7 +55,7 @@ E ai ele sera intalado no powerShell
 
 
 
-## 2 . Instalação do Yarn**
+### 2 . Instalação do Yarn**
 
 Melhor instalador de pacotes do node e o YARN e e recomendado a instalacao dele pois ele e mais rapido que o NPM
 
@@ -99,6 +99,18 @@ Dentro da pasta do Backend através do powershell voce executa o sequinte comand
 
 para ele nao realizar perguntas sobre o projeto que nao sao importantes no momento
 
-![Estrutura](img/smo-08.png)
+![Yarn](img/smo-08.png)
+
+
+assim que realizarmos isso, ira aparecer um package.json 
+
+
+apos isso devemos adicionar o express com o seguinte comando:
+
+``` yarn add express ```
+
+apos isso ira criar uma pasta chamada node_modules (sao todos os codigos dos pacotes instalados) e um arquivo chamado yarn.lock (ele guarda as informacoes dos pacotes instalados etc)
+
+porque vai muito mais que apenas o express ou seja quando fazemos uma instalacao de um pacote esse processo e recursivo ou seja sempre um pacote depende de outro que depende de outro.
 
 
