@@ -292,3 +292,110 @@ passo 4 (No canto superior iremos colocar o endereco e quando clicarmos e send v
 
 Lembrando que o Insômnia ele recebe outros metodos ou seja se alterarmos no codigo para um metodo post e depois alterarmos no insominia ele irá executar.
 
+
+<hr>
+
+## CONECTANDO A APLICACAO AO BANCO DE DADOS e CRIACAO DAS TAELAS
+
+
+DO DEVRadas, onde iremos cadastrar os devs e etc.  
+
+
+Estamos Utilizando o MongoDB (Ele e um banco nao-Relacional) ou seja ele e otimo para aplicacoes que nao preciam de um relacionamento (por exemplo se formos fazer um E-commerce ai e um pouquinho mais complicado pois pensa um pedido ele e ligado a estoque, pessoa e varios parametros) Nao quer dizer que nao conseguimos fazer um relacionamento no mongoDB mas quer dizer que e mais complicado de escalar. 
+
+
+[MongoDB](mongodb.com)
+
+Ele e um banco de dados muito rapido e e hopedado em cloud
+
+
+1. Primeira coisa e conectar com o banco de dados:
+
+- Crie no site do MongoDb uma Clouster Free.
+
+- Apos isso va em **Database  Acessess**
+
+- Apois isso vai em **Network Acess** onde ira liberar os IPs que querem que acesse o  mondgo como esta em ambiente de desenvolvimento selecione (Allow Acess From Anywhere) agora quando for publicado deve-se colocar o IP do servidor em (add currente ip adressss)
+
+
+**Configurando e conectando a Clouster**
+
+1 . Clique em conected
+
+
+![passo4](../img/smo-19.png)
+
+
+2 . Vai clicar em conect yourAplication
+
+
+![passo5](../img/smo-20.png)
+
+
+3. Vai confirmar se o driver e nodeJS e confirmar a versao e depois copiar a string
+
+![passo6](../img/smo-21.png)
+
+
+**INSTALANDO O MONGOOSE**
+
+
+Apos feito isso vamos instalar usando no terminal ``` yarn add mongoose ```
+
+O mongoose e uma biblioteca que vai da acesso do node dentro da base de dados mongo que vai possibilitar a comunicacao da aplicacao com uma base de dados mongo
+
+
+apos isso iremos importar apra dentro da aplicacao o mongoose
+
+```JavaScript 
+
+const mongoose = require('mongoose');
+
+```
+apos isso iremos fazer a conexao com o banco de dados 
+
+
+```JavaScript 
+
+/** e dentro dos paramtros da funcao abaixo e ira colocar entre string a string de conexao do mongo  */
+mongoose.connect('mongodb+srv://omnistack:<password>@cluster0-ki3vj.mongodb.net/test?retryWrites=true&w=majority'); 
+
+```
+
+
+assim que contectarmos o node ira retornar no terminal um "Erro" que nao e bem um erro:
+
+>(node:14384) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.   
+>(node:14384) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option 
+>{ useUnifiedTopology: true } to the MongoClient constructor.
+
+Para resolver isso iremos passar um segundo aprametro para sfuncao lembrando que o que estamos passando esta como dica de resolucao no proprio aviso
+
+```JavaScript 
+
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-ki3vj.mongodb.net/week10?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}) ; 
+
+```
+
+
+Alguns erros que podem dar na conexao:
+
+- Se voce trocou o usuario e senha (confirnar b databe assess se o usuario e senha estao configurados certinhos)
+
+- Conferir se o Network Acess foi configurado corretamente
+
+- Caso nao de trocar a versao (ai copia a url)
+
+- e se voce estiver em proxy pode dar erro ai voce pode consultar o  [portquiz.net:27017](portquiz.net:27017) ou seja 27017 e a porta do mongoDB
+
+
+
+## Models
+
+O que sao os Models?
+
+Os models sao as representacoes das entidades da nossa aplicacao, entidades podemos pensar como aquelas informacoes que queremos armazenar no nosso banco de dados
+
