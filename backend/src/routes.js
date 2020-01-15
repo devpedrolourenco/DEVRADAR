@@ -15,7 +15,8 @@
 
  
 
- routes.get('/', (request, response) => {
+ routes.post('/devs', (request, response) => {
+     console.log(req.body);
     return response.json({ message: ' Hello Worlsssd'}); 
 
 }); //aqui vai definir a rota e podemos imputar uma arrow function 
