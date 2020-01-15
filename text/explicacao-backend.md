@@ -45,7 +45,7 @@ inciando o desenvolvimento:
 
 <hr>
 
-1 . Devemos criar um arquivo chamado Index.js
+**1 . Devemos criar um arquivo chamado Index.js**
 
 toda aplicacao ela tem rotas;  
 
@@ -57,7 +57,7 @@ ou seja a rota e o endereco adicional que recebemos apos o endereco principal da
 
 <hr>
 
-2 . Chamando o express e imputando ele na aplicacao:
+**2 . Chamando o express e imputando ele na aplicacao:**
 
 ```javascript
 
@@ -77,7 +77,7 @@ const app = express(); //express ele e uma funcao
 
 <hr>
 
-3. Depois iremos definir o caminho onde essa aplicacao ira seguir:
+**3. Depois iremos definir o caminho onde essa aplicacao ira seguir:**
 
 
 
@@ -136,7 +136,7 @@ caso queria parar a execucao do node e so apertar ``` ctrl + c ```
 
 <hr>
 
-4. Utilizando a Estrutura de dados chamada Json \
+**4. Utilizando a Estrutura de dados chamada Json**
 
 No lugar de send como mostrado no codigo acima iremos colocar json e nao podemos enviar uam string nele, temos que enviar um vetor ou um objeto. para enviar um objeto coloca entre chafes
 
@@ -153,7 +153,7 @@ No lugar de send como mostrado no codigo acima iremos colocar json e nao podemos
 
 <hr>
 
-5. Atualizacao automatica 
+**5. Atualizacao automatica** 
 
 Uma coisa que temos que perceber se eu mudar qualquer coisa e salvar e tentar atualizar ele nao ira mudar, porque o node depois que ele executou ele nao fica observando as alteracoes no codigo simplemsente ele so fica no anterior, para isso agente vai instalar uma outra dependencia / biblioteca com o seguinte comnado:
 
@@ -163,7 +163,7 @@ dependencias de desenvolvimento ficam separadas no packege.json dentro de devDep
 
 <hr>
 
-6. Executando a aplicacao em ambiente de desenvolvimento:
+**6. Executando a aplicacao em ambiente de desenvolvimento:**
 
 podemos usar:
 
@@ -203,7 +203,7 @@ ou seja estou falando no script acima que toda vez que eu escrever **yarn dev** 
 ![script](../img/smo-12.png)
 
 
-6. Apos deixar executando abriremos um outro terminal onde esta apontado com a seta na imagagem abaixo e logo em seguida como fica aberto dois terminais.
+**6. Apos deixar executando abriremos um outro terminal onde esta apontado com a seta na imagagem abaixo e logo em seguida como fica aberto dois terminais.**
 
 ![part1-terminal](../img/smo-13.png)
 
@@ -220,12 +220,75 @@ Isso para fazer instalacoes de outras dependencias executar ou aglo assim.
 
 Os principais metodos que utilizaremos sao: 
 
-| Metodos |  Descricao                                                                                                                        |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------|
-|  get    | Quando se cria uma rota usando o metodo get, quer dizer que estou buscando uma informacao ou seja get do ingles significa pegar   | 
-|  post   |                                                                                                                                   |
-|  put    | Quando se quer editar um recurso da aplicacao                                                                                     |  
-|  delete | E o delete e para deletar                                                                                                         |
+| Metodos HTTP |  Descricao                                                                                                                        |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------|
+|  get         | Quando se cria uma rota usando o metodo get, quer dizer que estou buscando uma informacao ou seja get do ingles significa pegar   | 
+|  post        |                                                                                                                                   |
+|  put         | Quando se quer editar um recurso da aplicacao                                                                                     |  
+|  delete      | E o delete e para deletar                                                                                                         |
 
 
-get conseguimos acessar sem precisar de outros sistemas porque ele ja e nativo do browser, porem se quisermos testar os outros metodos 
+get conseguimos acessar sem precisar de outros sistemas porque ele ja e nativo do browser, porem se quisermos testar os outros metodos, nesse caso iremos usar outra ferramenta chamada insominia
+
+
+Tipos de parâmetros:
+
+**Query Params:** Eles sao 90% das vezes usados no metodo get, imagine que voce tenha uma rota app.get de listagem de ususarios ou seja essa rota ira listar os usuarios e vamos supor que eu quero buscar e tenho um imput de busca ou seja quando eu for passar essa informação pro meu backend qual e a busca do usuario eu envio como um Querry Pararm para criar no insomnia basta clicar na aba Querry: Terá dois campos o do nome e do valor, exemplo se voce for fazer um search (busca) e vo valor pedro.  
+
+E ele e requisitado como req.query (request.query) e e usado para filtros, para ordenação, paginação e etc.
+
+**Route Params:** Eles praticamente sempre sao usados no metodo Put e no Metodo Delete, ou seja quando eu quero editar um usuario ou deletar um usuario eu estou falando especificamente de um usuario, entao eu preciso informar qual e esse usuario que quero alterar e qual e o que quero deletar e etc. 
+
+Para acessar esses parametros iremos utilizar o req.params (request.params) e e usado para identificar um recurso na alteracao ou remoção
+
+**Body:** ele e muito utilizado no metodo post e put, ou seja quando eu quero criar alguma coisa. por exemplo eu quero cirar um usuario para enviar os dados eu preciso evniar pelo corpo da requisição e o corpo da requisição pode ter varios formatos o formato que iremos utilizar por se tratar de uma API restfull será o JSON. para se escrever no corpo do Json no insominia temos quer tratar como um obejeto no javaScript a unica diferença e que toda propriedade todo valor precia escrever em aspas duplas. a nao ser que seja um numero exeplo:
+
+```json 
+{
+    "name": "pedro",
+    "email": "dev.pedrolourenco@gmail.com"
+
+
+}
+
+
+```
+e para acessar esse parametro iremos usar o req.body (request.body) e e usado apra dados para criacao ou alteracao de um registro.
+
+> **Lembrando que por padrao a Lib do EXPRESS nao entende Json entao devemos informar a ele para conseguir integrar exemplo ``` app.use(express.json()) ``` ou seja to dizemos ao meu express que ele ire entender o que e json.*** 
+
+
+
+
+[Download Isominua](https://insomnia.rest/)
+
+Caso seu sistema seja 32 bits nao ira funcionar o insomnia mas tem um similar chamado getpostman
+
+[Download getpostman](https://www.getpostman.com/downloads/)
+
+<hr>
+
+**7. Configurando o Insominia** 
+
+- Criando a Requisicao no insomnia (request)
+
+passo 1
+
+![passo1](../img/smo-15.png)
+
+
+passo 2
+
+![passo2](../img/smo-16.png)
+
+passo 3 (selecionar metodo)
+
+![passo3](../img/smo-17.png)
+
+
+passo 4 (No canto superior iremos colocar o endereco e quando clicarmos e send veremos que retornara o medoto get)
+
+![passo3](../img/smo-18.png)
+
+Lembrando que o Insômnia ele recebe outros metodos ou seja se alterarmos no codigo para um metodo post e depois alterarmos no insominia ele irá executar.
+
