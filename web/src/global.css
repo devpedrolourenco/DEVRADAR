@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+
+/**
+* setar porque normalemtne sempre ocupa 100 da largura e nao da altura ai para ocupar setar altura 100%
+*/
+html, body, #root {
+    height: 100%;
+}
+
+
+
+body {
+    background: #e5e6f0;
+    -webkit-font-smoothing: antialiased; /* torna mais legivel a fonte*/
+}
+
+body, input, button {
+    font-family: Roboto, sans-serif;
+}
