@@ -399,3 +399,71 @@ O que sao os Models?
 
 Os models sao as representacoes das entidades da nossa aplicacao, entidades podemos pensar como aquelas informacoes que queremos armazenar no nosso banco de dados
 
+## CONSUMINDO A API DO GITHUB
+
+Para comecao vamos adicionar usando o Yarn o Axios ``` yarn add axios``` que ela faz chamadas para outras APIs Disponiveis
+
+apos isso de o comando da API do Git 
+
+
+```JavaScript 
+
+routes.post('/devs', async (request, response) => {
+     const { github_username, techs } = request.body;  
+
+     const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`);
+
+    let { name = login, avatar_url, bio } = apiResponse.data; 
+  
+    console.log(name, avatar_url, bio, github_username);
+
+    const techsArray = techs.split(',').map( techs => techs.trim()); 
+
+     
+    const dev = await Dev.create({
+        github_username, 
+        name,
+        avatar_url,
+        bio,
+        techs: techsArray,
+
+    });
+
+    return response.json(dev); 
+
+    
+
+}); 
+
+```
+
+## CONECTANDO O MONGO COMMUNITU COMPASS
+
+1. 
+
+![passo7](../img/smo-22.png)
+
+2. 
+
+![passo8](../img/smo-23.png)
+
+## CONTROLER NAME
+
+Normalmente quando se nomeia o controller segue um padrao
+
+index       ---->     Quando se quer buscar uma lista
+show        ---->     Quando se quer buscar apenas um item 
+store       ---->     Quando eu quero cirar algo
+update      ---->     Quando eu quer alterar
+destroy     ---->     Quando eu quero Deletar
+
+
+## finalizacao do backEnd
+
+1. 
+
+![passo9](../img/smo-24.png)
+
+2. 
+
+![passo10](../img/smo-25.png)
