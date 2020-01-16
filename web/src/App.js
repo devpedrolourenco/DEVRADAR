@@ -36,13 +36,19 @@ function App() {
       )
   }, []);
 
+  //criar uma funcao que ira disparar toda vez que o usuario der submir
+
+  async function handleAddDev (e){
+    e.preventDefaul();
+
+  }
   
   return (
    <div id="app">
      <aside>
        <strong>Cadastrar</strong> 
 
-       <form>
+       <form onSubmit={handleAddDev}>
 
          <div className="input-block">
             <label htmlFor="github_username">Usuario do Github</label>

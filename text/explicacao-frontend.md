@@ -58,3 +58,9 @@ ou seja sempre que tiver abertura e fechamento de tag devemos importar o React
  **- Propriedade:** Informacoes mantidas pelo componente (lembrar: Imutabilidade)
 
  obs 42min da aula explicando os conceitos basicos
+
+ ## integrando o Front com a API do back End
+
+ Para executar alteracoes esternar temos que instalar um pacote chamado cors que permite que mesmo em portas diferentes a aplicacao web pode acessar 
+
+ ``` $ yarn add cors ```
