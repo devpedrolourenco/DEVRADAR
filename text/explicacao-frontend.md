@@ -61,6 +61,11 @@ ou seja sempre que tiver abertura e fechamento de tag devemos importar o React
 
  ## integrando o Front com a API do back End
 
- Para executar alteracoes esternar temos que instalar um pacote chamado cors que permite que mesmo em portas diferentes a aplicacao web pode acessar 
+ Para executar alteracoes esternar temos que instalar um pacote chamado cors dentro do Backendssque permite que mesmo em portas diferentes a aplicacao web pode acessar 
 
  ``` $ yarn add cors ```
+
+
+ Para fazer chamado a apI temos que instalar um carinha chamado Axios que um lib que faz essa integracao
+
+ ``` $ yarn add axios ```

@@ -1,5 +1,6 @@
 const express = require('express'); //chamando o express em uma variavel
 const mongoose = require('mongoose'); //chamando a biblioteca que faz integracao entre aplicacao e o banco de dados
+const cors = require('cors');
 const routes = require('./routes'); //Importando o arquivo routes para dentro do codigo
 
 const app = express(); //express ele e uma funcao
@@ -13,6 +14,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-ki3vj.mongodb.net/w
     useUnifiedTopology: true
 }) ; 
 
+app.use(cors())
 app.use(express.json());
 app.use(routes); //agora toas as rotas estao cadastradas na aplicacao
 
