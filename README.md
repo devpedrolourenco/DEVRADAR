@@ -1,72 +1,20 @@
 # semana-omniStack-10
  semana ommniStack-10  #rocketseat
 
- Projeto criado na Semana Omnistack 10 pelo pessoal da rocketseat 
+ Projeto de uma aplicação completa chamada **DEVRADAR**, onde o usuario ele cadastra o user do github e os dados das tecnologias que trabalha e na interface mobile onde o usuario busca os desenvolvedores pertos de uma determinada tecnologia. 
  
  [Site da Rocketseat](https://rocketseat.com.br/)
  [Canal do Youtube Rocketseat](https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg)
 
+##  Tecnologias usadas
+Projeto Desenvolvidos nas Seguintes Tecologias:
 
-## CONFIGURAÇÃO DO AMBIENTE E SOFTWARES NECESSÁRIOS (No Windowns)! 
+- [Node.js](https://nodejs.org/en/)
+- [React](https://reactjs.org)
+- [React Native](https://docs.rocketseat.dev/ambiente-react-native/introducao)
+- [Expo](https://expo.io/)
 
-### 1 . Instalação do Node JS.
+## Licença
 
-[Site NodeJS](https://nodejs.org/en/)
-
-
-Recomenda-se que se instala a versão LTS que é a de suporte a longo prazo. 
-
-![home Node](img/smo-01.png)
-
-
-> É recomendado que se instale o node atraves dos gerenciadores de pacote pois assim facilita a ataulização mudanças e versão e etc!
-
-Para conseguirmos instalar por gerenciador de pacotes iremos clicar em Dowloads e no canto inferior clicar em **Installing Node.js via Package Manager**
-
-![Download Node](img/smo-02.png)
-
-[Intalling package manager](https://nodejs.org/en/download/package-manager/)
-
-
-![pkg mananger](img/smo-03.png)
-
-
-Primeiro devemos instalar o Chocolato no caso do Windowns que é um gerenciador de pacotes via powershell:
-
-[Download choco](https://chocolatey.org/install)
-
-![Download choco](img/smo-06.png)
-
-Após instalar o gerenciador de pacores volta no site do Node e executa o comando via terminal de instalação
-
-![Codigo Node.js](img/smo-05.png)
-
-E ai ele sera intalado no powerShell
-
-![Powershell](img/smo-04.png)
-
->lembrando que para instalar a versão LTS voce deve executar no Powerselll o seguinte comando:
-
-``` choco install nodejs-lts  ```
-
-**Caso voce tenha instalado sem querer a versao current pode remover ela com o seguinte comando antes de instalar a versao lts** 
-
-``` choco unistall nodejs -y --remove-dependencies   ```
-
-
-
-### 2 . Instalação do Yarn**
-
-Melhor instalador de pacotes do node e o YARN e e recomendado a instalacao dele pois ele e mais rapido que o NPM
-
-[Download Yarn](https://yarnpkg.com/lang/en/)
-
-**Instalar via Chocolatey**
-
-Chocolatey é um gerenciador de pacotes para Windows. Você pode instalar o Chocolatey seguindo estas instruções .
-
-Depois de instalar o Chocolatey explicado la em cima , você pode instalar o fio executando o seguinte código no console:
-
-```  choco install yarn ```
-
+[MIT]() &copy; [Rocketseat](https://rocketseat.com.br/)
 
