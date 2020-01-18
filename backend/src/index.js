@@ -1,9 +1,15 @@
 const express = require('express'); //chamando o express em uma variavel
 const mongoose = require('mongoose'); //chamando a biblioteca que faz integracao entre aplicacao e o banco de dados
 const cors = require('cors');
+const http = require('http');
 const routes = require('./routes'); //Importando o arquivo routes para dentro do codigo
+const { setupWebscoket } = require('./websocket')
+
 
 const app = express(); //express ele e uma funcao
+const server = http.Server(app);
+
+setupWebscoket(server);
 
 
 /** e dentro dos paramtros da funcao abaixo e ira colocar entre string a string de conexao do mongo ai deve alterar a senha e o test qe colocar o nome 
@@ -27,4 +33,4 @@ app.use(routes); //agora toas as rotas estao cadastradas na aplicacao
 
 
 
- app.listen(3333); //aqui voce seleciona a porta 
+ server.listen(3333); //aqui voce seleciona a porta 

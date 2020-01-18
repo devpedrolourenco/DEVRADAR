@@ -1,8 +1,11 @@
 import React from 'react';
-import {StatusBar} from 'react-native' //como quero que todas as paginas alterem a satatus bar 
+import {StatusBar, YellowBox} from 'react-native' //como quero que todas as paginas alterem a satatus bar 
 
 import Routes from './src/routes'
 
+YellowBox.ignoreWarnings([
+  'Unrecognized WebSocket'
+]);
 
 
 export default function App() {
